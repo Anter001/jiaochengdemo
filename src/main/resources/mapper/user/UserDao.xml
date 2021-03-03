@@ -27,4 +27,19 @@
         );
 
     </insert>
+
+    <!--根据id查询用户数据-->
+    <select id="getUserById" parameterType="java.lang.Integer" resultType="cn.yykjc.jiaochengdemo.user.entity.UserEntity">
+        select * from user where id = ${id}
+    </select>
+
+    <!--根据id修改用户数据-->
+    <update id="updateUserById" parameterType="cn.yykjc.jiaochengdemo.user.entity.UserEntity">
+        UPDATE `jiaochengdemo`.`user`
+        SET
+            `username` = ${username},
+            `password` = ${password},
+        WHERE
+            (`id` = ${id});
+    </update>
 </mapper>

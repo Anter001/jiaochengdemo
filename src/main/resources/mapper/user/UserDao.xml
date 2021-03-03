@@ -37,9 +37,8 @@
     <update id="updateUserById" parameterType="cn.yykjc.jiaochengdemo.user.entity.UserEntity">
         UPDATE `jiaochengdemo`.`user`
         SET
-            `username` = ${username},
-            `password` = ${password},
-        WHERE
-            (`id` = ${id});
+            `username` = #{username},
+            `password` = #{password}
+        WHERE (`id` = ${id});
     </update>
 </mapper>

@@ -19,5 +19,5 @@ public interface UserService {
     public UserEntity getUserById(Integer id);
 
     //根据id修改用户数据
-    public void updateUserById(@RequestBody UserEntity userEntity);
+    public void updateUserById(UserEntity userEntity);
 }
